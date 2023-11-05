@@ -45,3 +45,8 @@ make run_test
 make deploy FUNCTION_TARGET=CreateItem
 
 ```
+
+## ISSUE
+
+- Only Can running ONE function on same time.
+- Need Refactor Folder Structure
