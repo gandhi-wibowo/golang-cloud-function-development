@@ -1,0 +1,6 @@
+.gcloudignore
+cmd/*
+tests/*
+coverage.html
+go.sum
+coverage.out

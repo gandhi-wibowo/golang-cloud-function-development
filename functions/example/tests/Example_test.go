@@ -6,11 +6,11 @@ import (
 	"strings"
 	"testing"
 
-	"dizcoding.com/kfc"
+	"dizcoding.com/kfc/functions/example"
 	"github.com/tj/assert"
 )
 
-func TestCreateItem(t *testing.T) {
+func TestExample(t *testing.T) {
 	urlPath := "localhost:8000"
 	payload := `{"name":"Spicy Chicken Medium", "price":25000, "quantity":50}`
 	req := httptest.NewRequest(http.MethodPost, urlPath, strings.NewReader(payload))
@@ -18,7 +18,7 @@ func TestCreateItem(t *testing.T) {
 
 	rr := httptest.NewRecorder()
 	// call function
-	kfc.CreateItem(rr, req)
+	example.Example(rr, req)
 
 	println(rr.Body.String())
 	assert.Equal(t, 200, rr.Result().StatusCode)
