@@ -1,4 +1,4 @@
-package kfc
+package example
 
 import (
 	"encoding/json"
@@ -17,11 +17,10 @@ type Item struct {
 }
 
 func init() {
-	functions.HTTP("CreateItem", CreateItem)
+	functions.HTTP("Example", Example)
 }
 
-// lunarEntrypoint is an HTTP Cloud Function with a request parameter.
-func CreateItem(w http.ResponseWriter, r *http.Request) {
+func Example(w http.ResponseWriter, r *http.Request) {
 	// Use a service account
 	conf := &firebase.Config{ProjectID: "dev-nkc"}
 	ctx := context.Background()

@@ -3,7 +3,8 @@
 
 
 
-A Sample for writing an Google Cloud Function with Go Language
+A Sample for writing an Google Cloud Function with Go Language.
+One function will be considered as One service, so every single function will have go.mod, go.sum it self
 
 ## Features
 
@@ -18,6 +19,7 @@ A Sample for writing an Google Cloud Function with Go Language
 - Easy Deploy
 - Easy Local Test
 - Easy Unit Test
+- Easy Create New Function
 
 ## Usage
 
@@ -27,16 +29,24 @@ make start_firebase_emulators
 
 ```
 
+- Create New Function
+
+```
+make create_function NAME=CreateItem
+
+NOTE : this command will replace an existing function. SO, do it with full attention.
+```
+
 - Running Function Locally
 
 ```
-make run FUNCTION_TARGET=CreateItem
+make run NAME=CreateItem
 
 ```
 
 - Running Unit Test
 ```
-make run_test
+make run_test  NAME=CreateItem
 
 ```
 
@@ -48,5 +58,4 @@ make deploy FUNCTION_TARGET=CreateItem
 
 ## ISSUE
 
-- Only Can running ONE function on same time.
-- Need Refactor Folder Structure
+- How to handle, when multiple function use an common function. ie : string validation
