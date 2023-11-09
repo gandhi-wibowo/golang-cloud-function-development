@@ -32,30 +32,43 @@ make start_firebase_emulators
 - Create New Function
 
 ```
-make create_function NAME=CreateItem
+make create_function FUNCTION_TARGET=CreateItem DIR_NAME=createitem
 
 NOTE : this command will replace an existing function. SO, do it with full attention.
+```
+
+- Add Some pkg
+
+```
+copy folder name from pkg folder, to .pkg inside your functions directory.
+
+```
+
+- Initial pkg to created Function
+
+```
+ make init_local_dependency DIR_NAME=createitem
 ```
 
 - Running Function Locally
 
 ```
-make run NAME=CreateItem
+make run FUNCTION_TARGET=CreateItem DIR_NAME=createitem
 
 ```
 
 - Running Unit Test
 ```
-make run_test  NAME=CreateItem
+make run_test  DIR_NAME=createitem
 
 ```
 
 - Do Deploy To Gcloud
 ```
-make deploy FUNCTION_TARGET=CreateItem
+make deploy FUNCTION_TARGET=CreateItem DIR_NAME=createitem
 
 ```
 
 ## ISSUE
 
-- How to handle, when multiple function use an common function. ie : string validation
+-
