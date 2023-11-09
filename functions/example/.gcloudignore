@@ -4,3 +4,4 @@ tests/*
 coverage.html
 go.sum
 coverage.out
+.pkg
